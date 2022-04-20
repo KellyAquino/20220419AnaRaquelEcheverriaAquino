@@ -1,0 +1,27 @@
+﻿
+<h2>Paciente: @ViewBag.paciente.nombre</h2>
+
+<h2>Expediente</h2>
+
+<form action="/home/guardar_expediente/1?id_paciente=@ViewBag.paciente.id_paciente" method="POST">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="">Historia Medica</label>
+                <textarea type="date" class="form-control" name="historiamedica"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">Diagnostico</label>
+                <textarea type="time" class="form-control" name="diagnostico"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">Receta</label>
+                <textarea type="time" class="form-control" name="receta"></textarea>
+            </div>
+            
+            <button class="btn btn-primary">Guardar</button>
+        </div>
+    </div>
+
+
+</form>

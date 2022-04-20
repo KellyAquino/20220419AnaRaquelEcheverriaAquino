@@ -1,0 +1,38 @@
+﻿
+<div class="row">
+   <div class="col-6 offset-3">
+   	<div class="card">	
+   			<div class="card-header">Buscar Paciente</div>
+   			<div class="card-body">	
+   				<form action="~/Home/buscar" method="post">
+   					<div class="form-group">
+   						<label for="">Nombre del paciente</label>
+   						<input type="text" class="form-control" name="nombre_paciente">
+   					</div>
+   					<div class="text-center">
+   						<button class="btn btn-primary">Buscar</button>
+   					</div>
+   				</form>
+@{
+    if (HttpContext.Current.Request.QueryString["error"] == "1")
+    {
+    	<br>
+        <div class="alert alert-danger" role="alert">
+            Paciente no encontrado
+        </div>
+    }
+}
+@{
+    if (HttpContext.Current.Request.QueryString["ok"] == "1")
+    {
+    	<br>
+        <div class="alert alert-success" role="alert">
+            Paciente registrado con éxito
+        </div>
+    }
+}
+   			</div>	
+   	</div>	
+   </div>	
+
+</div>

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Citas";
+}
+
+<h2>Citas</h2>
+<table class="table">
+    <tr style="background-color:#dfdfdf">
+        <td>ID</td>
+
+        <td>Fecha Inicio</td>
+        <td>Hora Inicio</td>
+        <td>Hora Fin</td>
+        <td>Doctor</td>
+        <td>Paciente</td>
+        <td>Motivo</td>
+        <td>Referencia</td>
+        <td></td>
+    </tr>
+    @{
+        foreach (var item in ViewBag.citas)
+        {
+    <tr>
+        <td>@item.id</td>
+
+        <td>@item.fechacita.ToString("yyyy-MM-dd")</td>
+        <td>@item.horainicio</td>
+        <td>@item.horafin</td>
+        <td>@item.doctor</td>
+        <td>@item.paciente</td>
+
+
+        <td>@item.motivo</td>
+        <td>@item.referencia</td>
+        <td><a href="/home/expediente/0?id_paciente=@item.idpaciente">Expediente</a></td>
+    </tr>
+        }
+    }
+
+
+</table>
